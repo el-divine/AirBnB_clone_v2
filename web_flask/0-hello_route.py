@@ -1,15 +1,12 @@
 #!/usr/bin/python3
 """Starts a Flask web application.
-
-The application listens on 0.0.0.0, port 5000.
-Routes:
-    /: Displays 'Hello HBNB!'
 """
+
 from flask import Flask
 
 app = Flask(__name__)
 
-
+" Define th route for th root URL '/'
 @app.route("/", strict_slashes=False)
 def hello_hbnb():
     """Displays 'Hello HBNB!'"""
@@ -17,4 +14,6 @@ def hello_hbnb():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    # Start the Flask development server
+    # Listen on all available network interfaces (0.0.0.0) and port 5000
+    app.run(host="0.0.0.0", port=5000)
